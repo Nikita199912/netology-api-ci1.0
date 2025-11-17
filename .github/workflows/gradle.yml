@@ -24,13 +24,11 @@ jobs:
 
       - name: Start SUT (application) in background and wait for it
         run: |
-          # Запускаем JAR в фоне и пишем лог
           nohup java -jar ./artifacts/app-mbank.jar > sut.log 2>&1 &
 
           APP_PORT=9999
           echo "Waiting for SUT to start on port $APP_PORT..."
 
-          # Ждём до 30 секунд, принимаем любой HTTP-ответ (даже 404) как признак работы сервиса
           code="000"
           for i in {1..30}; do
             code=$(curl -sS -o /dev/null -w "%{http_code}" http://localhost:$APP_PORT/ || echo "000")
