@@ -3,7 +3,7 @@ name: Java CI с Gradle
 on: [push, pull_request]
 
 jobs:
-  build:
+ build:
 
   runs-on: ubuntu-latest
 
