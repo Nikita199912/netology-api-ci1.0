@@ -1,1 +1,2 @@
 # netology-api-ci1.0
+[![Java CI с Gradle](https://github.com/Nikita199912/netology-api-ci1.0/actions/workflows/gradle.yml/badge.svg)](https://github.com/Nikita199912/netology-api-ci1.0/actions/workflows/gradle.yml)
